@@ -30,14 +30,17 @@
             top: 0;
             z-index: 100;
         }
-        .logo-container {
-            display: flex;
-            align-items: center;
+        .header-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1A2F23;
+            letter-spacing: 0.5px;
         }
-        .logo-container img {
-            height: 110px; /* Increased from 65px to make the logo larger and highly readable */
-            width: auto;
-            display: block;
+        .header-brand span {
+            color: #2F6642;
+            font-weight: 400;
+            font-size: 0.9rem;
+            margin-left: 5px;
         }
         nav {
             display: flex;
@@ -69,21 +72,27 @@
             color: #FFFFFF;
         }
 
-        /* Page Title Block */
+        /* Page Title Block (Shaded Hero Area) */
         .page-title-block {
             background-color: #F4F7F5;
-            padding: 4rem 10% 3rem;
+            padding: 4rem 10%;
             border-bottom: 1px solid #E2E8F0;
         }
-        .page-title-block h1 {
-            font-size: 2.5rem;
-            color: #1A2F23;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+        .hero-logo-container {
+            margin-bottom: 1.5rem;
+        }
+        .hero-logo-container img {
+            height: 180px; /* Scaled up to cleanly match and dominate the header space matching your request */
+            width: auto;
+            display: block;
         }
         .page-title-block p {
             color: #5A6A5E;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
+            font-weight: 400;
+            border-top: 1px solid #E2E8F0;
+            padding-top: 1rem;
+            display: inline-block;
         }
 
         /* Main Layout Sections */
@@ -108,6 +117,7 @@
             header { padding: 1rem 5%; flex-direction: column; gap: 1rem; }
             nav { flex-wrap: wrap; justify-content: center; }
             nav a, .nav-phone { margin: 0.5rem 1rem; }
+            .hero-logo-container img { height: 130px; }
         }
         .profile-sidebar {
             text-align: center;
@@ -283,11 +293,9 @@
 </head>
 <body>
 
-    <!-- Header Navigation with Logo Image -->
+    <!-- Header Navigation -->
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Shobe Valuation & Advisory Logo">
-        </div>
+        <div class="header-brand">SHOBE <span>| VALUATION & ADVISORY</span></div>
         <nav>
             <a href="#">Services</a>
             <a href="#" class="active">About</a>
@@ -296,9 +304,11 @@
         </nav>
     </header>
 
-    <!-- Page Title Block -->
+    <!-- Page Title Block featuring the logo verbatim from logo.png -->
     <section class="page-title-block">
-        <h1>About Our Valuation Practice</h1>
+        <div class="hero-logo-container">
+            <img src="logo.png" alt="Shobe Valuation & Advisory Logo">
+        </div>
         <p>A Decade of Elite Agricultural and Commercial Real Estate Appraisal Expertise.</p>
     </section>
 
@@ -310,14 +320,14 @@
                     <img src="headshot.jpeg" alt="Devin Shobe, MAI, ARA">
                 </div>
                 <h2>Devin Shobe, MAI, ARA</h2>
-                <div class="subtitle">Principal & Certified General Appraiser</div>
+                <div class="subtitle">Principal & Certified General Appraiser[cite: 1]</div>
                 <div class="license-badges">
                     <strong>OH Lic #:</strong> 2020001635<br>
                     <strong>IN Lic #:</strong> CG42100002
                 </div>
             </div>
             <div class="profile-bio">
-                <p>Devin Shobe is a highly qualified Certified General Real Estate Appraiser and the driving force behind Shobe Valuation & Advisory. With a decade of dedicated field experience completing complex, routine, and highly specialized appraisal assignments, the practice delivers independent, defensible real property analytics built to withstand intense third-party review by major financial entities, management firms, and judicial bodies.</p>
+                <p>Devin Shobe is a highly qualified Certified General Real Estate Appraiser and the driving force behind Shobe Valuation & Advisory[cite: 1]. With a decade of dedicated field experience completing complex, routine, and highly specialized appraisal assignments, the practice delivers independent, defensible real property analytics built to withstand intense third-party review by major financial entities, management firms, and judicial bodies.</p>
                 <p>Throughout his career, Devin has developed deep technical expertise in both specialized agribusiness operations and traditional commercial property assets. His agricultural practice focuses on complex resource infrastructure, including grain elevators, high-capacity livestock confinement facilities, and production assets. On the commercial side, he has successfully analyzed a diverse array of industrial manufacturing facilities, retail corridors, office properties, and complex mixed-use developments.</p>
                 <p>Devin’s background includes extensive collaborative experience developing internal valuation infrastructure, including building advanced valuation forms and template software engines. Committed to professional advancement and education, he leverages his background as a former Certified Training Manager to serve as an active supervisor for state appraisal trainees, instilling high standards of forensic property analysis.</p>
                 <p>Demonstrating distinct industry leadership, Devin serves on the national Government Relations Committee for the ASFMRA and is the Immediate Past President of the Ohio Chapter of the ASFMRA, keeping his firm at the absolute forefront of regional and national agricultural policy frameworks.</p>
