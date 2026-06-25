@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Devin Shobe, MAI, ARA - Real Estate Valuation & Consulting</title>
+    <title>About | Shobe Valuation & Advisory - Real Estate Valuation & Consulting</title>
     <style>
         /* Modern Corporate Palette - Emerald Dark Green & Slate */
         * {
@@ -21,7 +21,7 @@
         /* Top Navigation Bar */
         header {
             background-color: #FFFFFF;
-            padding: 1.2rem 10%;
+            padding: 0.8rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -30,14 +30,18 @@
             top: 0;
             z-index: 100;
         }
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #1A2F23; /* Deep Slate Green */
-            letter-spacing: -0.5px;
+        .logo-container {
+            display: flex;
+            align-items: center;
         }
-        .logo span {
-            color: #2F6642; /* Accent Dark Green */
+        .logo-container img {
+            height: 65px; /* Scaled to look crisp and professional in the navbar */
+            width: auto;
+            display: block;
+        }
+        nav {
+            display: flex;
+            align-items: center;
         }
         nav a {
             color: #4A5568;
@@ -57,6 +61,7 @@
             border: 2px solid #2F6642;
             padding: 0.4rem 1rem;
             border-radius: 4px;
+            margin-left: 2rem;
             transition: all 0.2s;
         }
         .nav-phone:hover {
@@ -100,6 +105,9 @@
         }
         @media (max-width: 768px) {
             .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
+            header { padding: 1rem 5%; flex-direction: column; gap: 1rem; }
+            nav { flex-wrap: wrap; justify-content: center; }
+            nav a, .nav-phone { margin: 0.5rem 1rem; }
         }
         .profile-sidebar {
             text-align: center;
@@ -275,9 +283,11 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation with Logo Image -->
     <header>
-        <div class="logo">DEVIN SHOBE <span>VALUATION</span></div>
+        <div class="logo-container">
+            <img src="logo.png" alt="Shobe Valuation & Advisory Logo">
+        </div>
         <nav>
             <a href="#">Services</a>
             <a href="#" class="active">About</a>
@@ -289,7 +299,7 @@
     <!-- Page Title Block -->
     <section class="page-title-block">
         <h1>About Our Valuation Practice</h1>
-        <p>Specialized Agricultural and Commercial Real Estate Appraisal Services.</p>
+        <p>A Decade of Elite Agricultural and Commercial Real Estate Appraisal Expertise.</p>
     </section>
 
     <!-- Section: Profile/Bio -->
@@ -297,21 +307,20 @@
         <div class="profile-grid">
             <div class="profile-sidebar">
                 <div class="headshot-container">
-                    <!-- Referencing the provided headshot image directly -->
                     <img src="headshot.jpeg" alt="Devin Shobe, MAI, ARA">
                 </div>
                 <h2>Devin Shobe, MAI, ARA</h2>
-                <div class="subtitle">Certified General Appraiser</div>
+                <div class="subtitle">Principal & Certified General Appraiser</div>
                 <div class="license-badges">
                     <strong>OH Lic #:</strong> 2020001635<br>
                     <strong>IN Lic #:</strong> CG42100002
                 </div>
             </div>
             <div class="profile-bio">
-                <p>Devin Shobe is a highly qualified Collateral Analyst and Certified General Real Estate Appraiser specializing in complex agricultural and commercial real estate valuation for lending and litigation parameters. Backed by institutional standard-setting and industry leadership, the practice delivers rigorous, data-driven real property analytics built to survive intensive third-party review.</p>
-                <p>Currently serving as a Collateral Analyst at Farm Credit Mid-America, Devin excels in large-scale collateral appraisals, financial asset metrics, and process innovation. Notably, he has contributed directly as an active member of the department's Forms Team, engineering state-of-the-art appraisal templates and instructing valuation staff on implementation across regional divisions. His work also includes driving commercial workshops and refining advanced AgWare platform commercial infrastructure before structural market launch.</p>
-                <p>Devin's extensive experience spans complex ag-business properties, production facilities, commercial infrastructure, industrial real estate, and development tracts. Driven by a deep professional passion for training and educational development, he acts as an active supervisor for multiple appraisal trainees, standardizing high-level valuation excellence for the next generation of appraisers.</p>
-                <p>Demonstrating active industry commitment, Devin serves on the national ASFMRA Government Relations Committee and is the Immediate Past President of the Ohio Chapter of the ASFMRA, actively molding regional and national public policy frameworks affecting agricultural valuation infrastructure.</p>
+                <p>Devin Shobe is a highly qualified Certified General Real Estate Appraiser[cite: 1] and the driving force behind Shobe Valuation & Advisory. With a decade of dedicated field experience completing complex, routine, and highly specialized appraisal assignments[cite: 1], the practice delivers independent, defensible real property analytics built to withstand intense third-party review by major financial entities, management firms, and judicial bodies.</p>
+                <p>Throughout his career, Devin has developed deep technical expertise in both specialized agribusiness operations and traditional commercial property assets[cite: 1]. His agricultural practice focuses on complex resource infrastructure, including grain elevators, high-capacity livestock confinement facilities, and production assets[cite: 1]. On the commercial side, he has successfully analyzed a diverse array of industrial manufacturing facilities, retail corridors, office properties, and complex mixed-use developments[cite: 1].</p>
+                <p>Devin’s background includes extensive collaborative experience developing internal valuation infrastructure, including building advanced valuation forms and template software engines[cite: 1]. Committed to professional advancement and education, he leverages his background as a former Certified Training Manager[cite: 1] to serve as an active supervisor for state appraisal trainees, instilling high standards of forensic property analysis[cite: 1].</p>
+                <p>Demonstrating distinct industry leadership, Devin serves on the national Government Relations Committee for the ASFMRA and is the Immediate Past President of the Ohio Chapter of the ASFMRA[cite: 1], keeping his firm at the absolute forefront of regional and national agricultural policy frameworks.</p>
             </div>
         </div>
     </section>
@@ -324,15 +333,15 @@
         <div class="credentials-grid">
             <div class="cred-card">
                 <h3>MAI Designation</h3>
-                <p>Granted by the Appraisal Institute, the MAI designation signifies specialized commercial real estate valuation mastery. Universally recognized by major global financial corporations, courts, and federal regulators, it represents an outstanding baseline of technical accuracy and ethics.</p>
+                <p>Granted by the Appraisal Institute, the MAI designation signifies specialized commercial real estate valuation mastery[cite: 1]. Universally recognized by major global financial corporations, courts, and federal regulators, it represents an outstanding baseline of technical accuracy and ethics[cite: 1].</p>
             </div>
             <div class="cred-card">
                 <h3>ARA Designation</h3>
-                <p>The Accredited Rural Appraiser (ARA) designation from the ASFMRA marks exceptional expertise in complex agricultural operations, land resource economics, and agribusiness infrastructure, requiring comprehensive specialized exams and strict experience verification.</p>
+                <p>The Accredited Rural Appraiser (ARA) designation from the ASFMRA marks exceptional expertise in complex agricultural operations, land resource economics, and agribusiness infrastructure[cite: 1]. It requires comprehensive specialized exams and strict experience verification[cite: 1].</p>
             </div>
             <div class="cred-card">
                 <h3>Multi-State Certified General</h3>
-                <p>Fully licensed to complete any agricultural, commercial, industrial, or multi-family real property valuation without transactional limitations or asset size restrictions throughout both Ohio and Indiana.</p>
+                <p>Fully licensed to complete any agricultural, commercial, industrial, or multi-family real property valuation without transactional limitations or asset size restrictions throughout both Ohio and Indiana[cite: 1].</p>
             </div>
         </div>
     </section>
@@ -344,20 +353,20 @@
         
         <div class="why-us-grid">
             <div class="why-us-item">
-                <h3>Agricultural Agribusiness</h3>
-                <p>Advanced mastery in complex farm operations, production facilities, rural acreage, and land resource economics backed by ASFMRA infrastructure.</p>
+                <h3>Specialized Agribusiness</h3>
+                <p>Advanced valuation models for complex production facilities, high-capacity livestock confinement facilities, and grain elevator infrastructure[cite: 1].</p>
             </div>
             <div class="why-us-item">
-                <h3>Commercial Real Estate</h3>
-                <p>Robust income capitalization models and market-validated metrics for office, retail, industrial, manufacturing, and multi-family structures.</p>
+                <h3>Commercial & Mixed-Use</h3>
+                <p>Robust income capitalization and market analytics for industrial complexes, retail properties, office spaces, and mixed-use environments[cite: 1].</p>
             </div>
             <div class="why-us-item">
                 <h3>Court-Qualified Analysis</h3>
-                <p>Proven forensic defense experience, having provided formal valuations and expert witness testimony for high-stakes property partition disputes in the Court of Appeals.</p>
+                <p>Proven forensic defense experience, having provided formal valuations and expert witness testimony for high-stakes property partition disputes in the Court of Appeals[cite: 1].</p>
             </div>
             <div class="why-us-item">
                 <h3>USPAP Compliance</h3>
-                <p>Full compliance under the Uniform Standards of Professional Appraisal Practice, ensuring universal tier-1 institutional acceptance.</p>
+                <p>Full compliance under the Uniform Standards of Professional Appraisal Practice, ensuring universal tier-1 institutional acceptance[cite: 1].</p>
             </div>
         </div>
     </section>
@@ -376,23 +385,23 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4 style="font-weight: 800; letter-spacing: 0.5px;">DEVIN SHOBE APPRAISAL</h4>
-                <p style="margin-top: 1rem; font-size: 0.85rem;">Rigorous agricultural and commercial real estate valuations across Ohio and Indiana. Tailored analysis for institutional lending, corporate asset review, and expert litigation support.</p>
+                <h4 style="font-weight: 800; letter-spacing: 0.5px;">SHOBE VALUATION & ADVISORY</h4>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">Rigorous agricultural and commercial real estate valuations across Ohio and Indiana[cite: 1]. Tailored analysis for institutional lending, corporate asset review, and expert litigation support[cite: 1].</p>
             </div>
             <div class="footer-col">
                 <h4>State Registrations</h4>
-                <p>Ohio Certified General: #2020001635</p>
-                <p>Indiana Certified General: #CG42100002</p>
+                <p>Ohio Certified General: #2020001635[cite: 1]</p>
+                <p>Indiana Certified General: #CG42100002[cite: 1]</p>
             </div>
             <div class="footer-col">
                 <h4>Contact Parameters</h4>
-                <p>St Marys, Ohio 45885</p>
-                <p>Phone: 419-234-6237</p>
-                <p>Email: devinshobe@gmail.com</p>
+                <p>St Marys, Ohio 45885[cite: 1]</p>
+                <p>Phone: 419-234-6237[cite: 1]</p>
+                <p>Email: devinshobe@gmail.com[cite: 1]</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Devin Shobe Appraisal. All rights reserved.</p>
+            <p>&copy; 2026 Shobe Valuation & Advisory. All rights reserved.</p>
             <p style="margin-top: 0.5rem; color: #4A5550;">Professional valuation standards, records retention, and client confidentiality strictly governed by USPAP and state licensing boards.</p>
         </div>
     </footer>
