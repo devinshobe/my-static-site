@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Professional Commercial Real Estate Appraisal</title>
+    <style>
+        /* Modern Corporate Palette */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2D3748;
+            background-color: #FFFFFF;
+        }
+
+        /* Top Navigation Bar */
+        header {
+            background-color: #FFFFFF;
+            padding: 1.2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #E2E8F0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1A365D; /* Deep Navy */
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #B7791F; /* Accent Amber */
+        }
+        nav a {
+            color: #4A5568;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover, nav a.active {
+            color: #1A365D;
+        }
+        .nav-phone {
+            color: #1A365D;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid #1A365D;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .nav-phone:hover {
+            background-color: #1A365D;
+            color: #FFFFFF;
+        }
+
+        /* Hero Header Block */
+        .page-title-block {
+            background-color: #F7FAFC;
+            padding: 4rem 10% 3rem;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        .page-title-block h1 {
+            font-size: 2.5rem;
+            color: #1A365D;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .page-title-block p {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+
+        /* Main Layout Sections */
+        .section-wrapper {
+            padding: 5rem 10%;
+        }
+        .bg-light {
+            background-color: #F7FAFC;
+            border-top: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        /* Two-Column Profile Grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+        .profile-sidebar h2 {
+            font-size: 1.8rem;
+            color: #1A365D;
+            margin-bottom: 0.5rem;
+        }
+        .profile-sidebar .subtitle {
+            color: #B7791F;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        .profile-bio p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #4A5568;
+        }
+
+        /* Credentials Section */
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        .cred-card {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 6px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .cred-card h3 {
+            color: #1A365D;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid #F7FAFC;
+            padding-bottom: 0.5rem;
+        }
+        .cred-card p {
+            font-size: 0.95rem;
+            color: #4A5568;
+        }
+
+        /* Core Values / Why Choose Us Grid */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .why-us-item h3 {
+            color: #1A365D;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .why-us-item h3::before {
+            content: "✓";
+            color: #B7791F;
+            font-weight: 900;
+        }
+        .why-us-item p {
+            font-size: 0.95rem;
+            color: #4A5568;
+        }
+
+        /* Call To Action Block */
+        .cta-block {
+            background-color: #1A365D;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 5rem 10%;
+        }
+        .cta-block h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .cta-block p {
+            color: #E2E8F0;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background-color: #B7791F;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .btn-primary:hover { background-color: #975A16; }
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 1px solid #FFFFFF;
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover { background-color: #FFFFFF; color: #1A365D; }
+
+        /* Fine Print Footer */
+        footer {
+            background-color: #0F172A;
+            color: #94A3B8;
+            padding: 4rem 10% 2rem;
+            font-size: 0.9rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+        .footer-col h4 {
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .footer-col p { margin-bottom: 0.5rem; }
+        .footer-bottom {
+            border-top: 1px solid #1E293B;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">DEVIN SHOBE <span>APPRAISAL</span></div>
+        <nav>
+            <a href="#">Services</a>
+            <a href="#" class="active">About</a>
+            <a href="#">Contact</a>
+            <a href="tel:5557047070" class="nav-phone">(555) 704-7070</a>
+        </nav>
+    </header>
+
+    <!-- Page Title Block -->
+    <section class="page-title-block">
+        <h1>About Our Valuation Practice</h1>
+        <p>Independent, state-certified commercial real estate appraisal and consulting services.</p>
+    </section>
+
+    <!-- Section: Profile/Bio -->
+    <section class="section-wrapper">
+        <div class="profile-grid">
+            <div class="profile-sidebar">
+                <h2>Devin Shobe, MAI, ARA</h2>
+                <div class="subtitle">Founder & Certified General Appraiser</div>
+            </div>
+            <div class="profile-bio">
+                <p>Devin Shobe founded the valuation practice to deliver rigorous, data-driven real estate appraisal solutions. With extensive background analyzing commercial assets, agricultural operations, and specialized infrastructure, the practice is built on technical accuracy and independent market tracking.</p>
+                <p>Prior to establishing the independent fee practice, extensive experience was gained managing complex institutional valuations, regulatory lending reviews, and collateral risk metrics. This background ensures that every report meets the highest institutional scrutiny required by regional lenders, AMCs, and regulatory agencies.</p>
+                <p>The practice specializes in comprehensive narrative valuations across diverse property types including community retail infrastructure, multi-family complexes, industrial manufacturing facilities, complex agricultural assets, and development land. Valuations are engineered for a wide array of application scopes, including mortgage financing, estate planning, tax assessment, and litigation defense.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Credentials & Licensing -->
+    <section class="section-wrapper bg-light">
+        <h2 style="color: #1A365D; font-size: 1.8rem; margin-bottom: 0.5rem;">Verified Credentials & Licensing</h2>
+        <p style="color: #718096; margin-bottom: 2rem;">Full compliance with federal and state regulatory infrastructure guarantees defensible valuations.</p>
+        
+        <div class="credentials-grid">
+            <div class="cred-card">
+                <h3>State Certified General</h3>
+                <p>Active and fully credentialed Certified General Real Estate Appraiser in Ohio and Indiana. Authorized to value all types of commercial, industrial, and agricultural real property regardless of transaction value or complexity.</p>
+            </div>
+            <div class="cred-card">
+                <h3>MAI Designation</h3>
+                <p>Held by advanced commercial valuation professionals, the MAI designation from the Appraisal Institute signifies deep technical competence, rigorous peer review, and adherence to professional ethics standards well exceeding baseline licensing.</p>
+            </div>
+            <div class="cred-card">
+                <h3>ARA Designation</h3>
+                <p>The Accredited Rural Appraiser (ARA) designation from the ASFMRA denotes expert proficiency in complex agricultural operations, rural agribusiness, land resource economics, and specialized permanent planting valuations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Why Choose Us -->
+    <section class="section-wrapper">
+        <h2 style="color: #1A365D; font-size: 1.8rem; margin-bottom: 0.5rem; text-align: center;">Why Partner With Us?</h2>
+        <p style="color: #718096; margin-bottom: 3rem; text-align: center;">Providing defensible reporting built around institutional guidelines.</p>
+        
+        <div class="why-us-grid">
+            <div class="why-us-item">
+                <h3>Court-Qualified Experts</h3>
+                <p>Reports are built to withstand rigorous cross-examination, providing reliable support for condemnation, litigation, and asset disputes.</p>
+            </div>
+            <div class="why-us-item">
+                <h3>USPAP Compliance</h3>
+                <p>Every single assignment strictly conforms to the Uniform Standards of Professional Appraisal Practice, ensuring universal acceptance by federal regulators.</p>
+            </div>
+            <div class="why-us-item">
+                <h3>Localized Analytics</h3>
+                <p>We leverage internal database networks tracking land transfers, construction cost indexes, and regional lease trends across coverage territories.</p>
+            </div>
+            <div class="why-us-item">
+                <h3>Reliable Timing</h3>
+                <p>We establish clear, transparent communication regarding assignment scopes and deliver reports within agreed-upon turn times without sacrificing quality control.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Block -->
+    <section class="cta-block">
+        <h2>Ready to Initiate an Assignment?</h2>
+        <p>Contact our office today to discuss property specifications, scope of work structures, or to request a fixed-fee quotation.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn-primary">Request a Quote</a>
+            <a href="tel:5557047070" class="btn-secondary">Call (555) 704-7070</a>
+        </div>
+    </section>
+
+    <!-- Corporate Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 style="font-weight: 800; letter-spacing: 0.5px;">DEVIN SHOBE APPRAISAL</h4>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">Comprehensive commercial, industrial, and agricultural property valuations across Ohio and Indiana. Tailored analysis for institutional lending, estate management, and litigation support.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <p><a href="#" style="color: #94A3B8; text-decoration: none;">Services</a></p>
+                <p><a href="#" style="color: #94A3B8; text-decoration: none;">About Us</a></p>
+                <p><a href="#" style="color: #94A3B8; text-decoration: none;">Contact</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Primary Office Location</p>
+                <p>Phone: (555) 704-7070</p>
+                <p>Email: intake@shobeappraisal.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Devin Shobe Appraisal. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; color: #64748B;">Professional standards and confidentiality are strictly governed by USPAP and state licensing boards.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
